@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3E6EC94-41A5-4FEA-A5FF-323845BD7A4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LibraryService_datalayer</RootNamespace>
+    <AssemblyName>LibraryService_datalayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRepositories\IAuthorRepo.cs" />
+    <Compile Include="IRepositories\IBookRepo.cs" />
+    <Compile Include="Migrations\201904141818132_v1.cs" />
+    <Compile Include="Migrations\201904141818132_v1.Designer.cs">
+      <DependentUpon>201904141818132_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161326388_AuthorAddEmailRequired.cs" />
+    <Compile Include="Migrations\201904161326388_AuthorAddEmailRequired.Designer.cs">
+      <DependentUpon>201904161326388_AuthorAddEmailRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161406196_AuthorDOBdatetime2.cs" />
+    <Compile Include="Migrations\201904161406196_AuthorDOBdatetime2.Designer.cs">
+      <DependentUpon>201904161406196_AuthorDOBdatetime2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161411392_AuthorDOBChangetoDate.cs" />
+    <Compile Include="Migrations\201904161411392_AuthorDOBChangetoDate.Designer.cs">
+      <DependentUpon>201904161411392_AuthorDOBChangetoDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161426173_displayFormatchangeDOB.cs" />
+    <Compile Include="Migrations\201904161426173_displayFormatchangeDOB.Designer.cs">
+      <DependentUpon>201904161426173_displayFormatchangeDOB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161429099_displayFormatchangeDOBAgain.cs" />
+    <Compile Include="Migrations\201904161429099_displayFormatchangeDOBAgain.Designer.cs">
+      <DependentUpon>201904161429099_displayFormatchangeDOBAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161431480_displayFormatchangeDOBAgain1.cs" />
+    <Compile Include="Migrations\201904161431480_displayFormatchangeDOBAgain1.Designer.cs">
+      <DependentUpon>201904161431480_displayFormatchangeDOBAgain1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161503441_CostPriceFormateCommented.cs" />
+    <Compile Include="Migrations\201904161503441_CostPriceFormateCommented.Designer.cs">
+      <DependentUpon>201904161503441_CostPriceFormateCommented.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161533044_RowVersionDisabled.cs" />
+    <Compile Include="Migrations\201904161533044_RowVersionDisabled.Designer.cs">
+      <DependentUpon>201904161533044_RowVersionDisabled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Cost.cs" />
+    <Compile Include="Models\LibraryContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AuthorDB.cs" />
+    <Compile Include="Repositories\AuthorList.cs" />
+    <Compile Include="Repositories\BookDB.cs" />
+    <Compile Include="Repositories\BookList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904141818132_v1.resx">
+      <DependentUpon>201904141818132_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161326388_AuthorAddEmailRequired.resx">
+      <DependentUpon>201904161326388_AuthorAddEmailRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161406196_AuthorDOBdatetime2.resx">
+      <DependentUpon>201904161406196_AuthorDOBdatetime2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161411392_AuthorDOBChangetoDate.resx">
+      <DependentUpon>201904161411392_AuthorDOBChangetoDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161426173_displayFormatchangeDOB.resx">
+      <DependentUpon>201904161426173_displayFormatchangeDOB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161429099_displayFormatchangeDOBAgain.resx">
+      <DependentUpon>201904161429099_displayFormatchangeDOBAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161431480_displayFormatchangeDOBAgain1.resx">
+      <DependentUpon>201904161431480_displayFormatchangeDOBAgain1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161503441_CostPriceFormateCommented.resx">
+      <DependentUpon>201904161503441_CostPriceFormateCommented.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161533044_RowVersionDisabled.resx">
+      <DependentUpon>201904161533044_RowVersionDisabled.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
