@@ -1,6 +1,6 @@
 Application Name: LibraryService. 
 
-Two types of implementation in this solution:
+---------- Two types of implementation in this solution: ---------
 1. LibraryService: (WebApi/Webservice)
   RESTful API that uses HTTP requests to GET, PUT, POST and DELETE data.
 
