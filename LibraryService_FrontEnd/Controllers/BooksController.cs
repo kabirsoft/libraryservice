@@ -41,7 +41,7 @@ namespace LibraryService_FrontEnd.Controllers
         // GET: Books/Create
         public ActionResult Create()
         {
-            ViewBag.AuthorId = new SelectList(db.Authors, "Id", "FirstName");
+            ViewBag.AuthorId = new SelectList(db.Authors, "Id", "FullName");
             ViewBag.CostId = new SelectList(db.Costs, "Id", "Id");
             return View();
         }

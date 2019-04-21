@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<LibraryService_datalayer.Models.Book>
+@using LibraryService_FrontEnd.Helpers
 
 
 
@@ -33,11 +34,13 @@
     {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
+            @*@Html.DisplayFor(modelItem => item.Title)*@
+            @Html.Truncate(@item.Title, 100)
+
         </td>
-        <td>     
+        <td>
             @Html.DisplayFor(modelItem=>item.Author.FullName)
-            
+
         </td>
         @*<td>
             @Html.DisplayFor(modelItem => item.Author.LastName)
