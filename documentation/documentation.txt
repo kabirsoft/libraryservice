@@ -1,0 +1,108 @@
+Application Name: LibraryService. 
+
+---------- Two types of implementation in this solution: ---------
+1. LibraryService: (WebApi/Webservice)
+  RESTful API that uses HTTP requests to GET, PUT, POST and DELETE data.
+
+2. LibrarySevice_FrontEnd: (MVC Framework)
+Use MVC framework to GET, PUT, POST and DELETE data.
+
+------------  Project's functionality: ------------
+1. Functionality for Book: 
+   Get, Add, Delete, Update Book
+   search book by book title
+   Search book by author
+   Get author name by book
+   Add/Edit cost to book
+2. Functionality for Author:
+	Get, Add, Delete, Update author
+Note: If you delete an author, it will delete that author's books as well.
+
+------------- Architecture:--------------- 
+See the library_service.png
+
+---------------------- Framework and tools ------------
+Back-end:
+  WebApi/webservice (library_webservice )
+  MVC    ( Library_frontend )
+  Entity framework ( Library_data )
+  StructureMap ( decide what implementation of IBookRepo to inject )
+  Swagger (documentation for Restful webservices. See swagger.png )
+  Routing  (matches url for HTTP request to a particular action method)
+  webapiCorse (Cross-Origin Resource Sharing)
+  Mirgration ( Entity framework tool to update Database schema )
+  
+Frontend: 
+  Bootstrap
+  Ajax
+
+----------------------------------------- Solution folder structure -----------
+Solution has 4 seperate project
+1. LibraryService_datalayer (Data has been separate from other project )
+2. LibraryService ( WebApi/WebService has been used to implement functionality )
+3. LibraryService_frontend ( MVC framework has been used to implement functionality)
+4. UnitTest_libraryService (Unit testing for LibraryService controllers)
+
+1. LibraryService_datalayer
+    Models
+	  Author.cs
+	  Book.cs
+	  Cost.cs
+	  LibraryContext.cs
+	  
+	IRepositories
+	  IAuhtorRepo.cs
+	  IBookRepo.cs	  
+	  
+	Repositories
+	  AuthorDB.cs
+	  AuthorList.cs
+	  BookDB.cs
+	  BookList.cs
+
+2. LibraryService ( webservice/webapi project )
+	Controllers
+	  AuthorsController.cs	
+	  BooksController.cs
+	  
+	Views
+		Home
+          Index.cshtml		  
+	Scripts
+		customscripts.js
+
+
+3. Library_frontend (MVC project )
+
+	Controllers
+	  AuthorsController.cs	
+	  BooksController.cs
+	  
+	Views
+		Authors
+			Create.cshtml
+			Delete.cshtml
+			Details.cshtml
+			Edit.cshtml
+			Index.cshtml
+		Books
+			Create.cshtml
+			Delete.cshtml
+			Details.cshtml
+			Edit.cshtml
+			Index.cshtml
+			GetBooksByAuthorName.cshtml
+			SearchBook.cshtml
+		
+4. UnitTest_libraryService
+      UnitTest_webapi (libraryService project's controller)	  
+		UnitTest_authors.cs
+		UnitTest_Books.cs
+
+--------------------------------------
+
+
+
+		
+	 
+	  
